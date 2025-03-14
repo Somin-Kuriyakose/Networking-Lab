@@ -23,9 +23,4 @@ case $operation in
                 echo "result:  $num1 / $num2 = $result";;
         *)
                 echo "invalid operation .....";;
-esac
-
-
-
-~                                                                                                                                      
-~                                   
+esac                                                                                                                                                                      
