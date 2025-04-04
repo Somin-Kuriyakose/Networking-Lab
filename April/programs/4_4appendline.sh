@@ -7,7 +7,8 @@ if [ ! -f "$file" ]; then
     exit 1
 fi
 
-awk '{print $0; if($0 ~ /\.$/) print "Hai Hello This is the appended line."}' "$file" > "${file}_modified"
+read -p "Enter the text to append: " append_text
 
-echo "Lines appended after each line ending with a period. The modified file is named '${file}_modified'."
+sed -i "/\.$/a $append_text" "$file"
 
+echo "The text '$append_text' has been appended after each line ending with a period in $file."
